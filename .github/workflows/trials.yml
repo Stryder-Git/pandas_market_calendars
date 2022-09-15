@@ -1,0 +1,13 @@
+name: trials
+
+on: 
+  pull_request:
+    branches: [master]
+  
+  
+jobs:
+  trial1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.pull_request.head.repo.fork }}
+      
